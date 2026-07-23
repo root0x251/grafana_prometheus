@@ -1,2 +1,5 @@
 .env
 *.log
+*.swp
+prometheus/prometheus.yml
+snmp/snmp.yml

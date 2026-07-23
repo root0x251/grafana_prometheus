@@ -1,0 +1,17 @@
+modules:
+  ups:
+    metrics:
+      - name: ups_battery_capacity
+        oid: 1.3.6.1.2.1.33.1.2.4.0
+      - name: ups_battery_temperature
+        oid: 1.3.6.1.2.1.33.1.2.7.0
+      - name: ups_input_voltage_phase1
+        oid: 1.3.6.1.2.1.33.1.3.3.1.3.1
+      - name: ups_input_voltage_phase2
+        oid: 1.3.6.1.2.1.33.1.3.3.1.3.2
+      - name: ups_input_voltage_phase3
+        oid: 1.3.6.1.2.1.33.1.3.3.1.3.3
+auths:
+  public_v2:
+    community: public
+    version: 2
