@@ -16,6 +16,14 @@ services:
       - '--collector.filesystem.mount-points-exclude=^/(sys|proc|dev|host|etc)($$|/)'
     ports:
       - "9100:9100"
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 256M
+        reservations:
+          cpus: '0.1'
+          memory: 64M
 
   cadvisor:
     image: gcr.io/cadvisor/cadvisor:latest
@@ -30,3 +38,11 @@ services:
       - /dev/disk:/dev/disk:ro
     ports:
       - "8080:8080"
+    deploy:
+      resources:
+        limits:
+          cpus: '1.0'
+          memory: 512M
+        reservations:
+          cpus: '0.25'
+          memory: 128M
